@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Butcher
   - CookTable
+  - "\u0421hair"
   layers:
   - Default
   - TransparentFX
