@@ -23,7 +23,6 @@ public class ProviderMenuClass : MonoBehaviour
     {
         if (objecti.Count != 0)
         {
-            Debug.Log(objecti.Count);
             foreach (GameObject i in objecti)
             {
                 Destroy(i);
