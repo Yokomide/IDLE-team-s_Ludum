@@ -5,19 +5,19 @@ using UnityEngine.UI;
 
 public class ProviderCellClass : MonoBehaviour
 {
-    private Text _name;
-    private Text _stars;
-    private Text _cost;
-    private List<ContentTextClass> _providersList = new List<ContentTextClass>();
-    private List<Text> _contentList = new List<Text>();
+    public Text name;
+    public Text stars;
+    public Text cost;
+    public List<ContentTextClass> providersList = new List<ContentTextClass>();
+    public List<Text> contentList = new List<Text>();
 
-    private void Start()
+    private void Awake()
     {
-        _name = gameObject.GetComponentInChildren<NameClass>().gameObject.GetComponent<Text>();
-        _stars = gameObject.GetComponentInChildren<StarsClass>().gameObject.GetComponent<Text>();
-        _cost = gameObject.GetComponentInChildren<CostClass>().gameObject.GetComponent<Text>();
+        name = gameObject.GetComponentInChildren<NameClass>().gameObject.GetComponent<Text>();
+        stars = gameObject.GetComponentInChildren<StarsClass>().gameObject.GetComponent<Text>();
+        cost = gameObject.GetComponentInChildren<CostClass>().gameObject.GetComponent<Text>();
 
-        _providersList = gameObject.GetComponentInChildren<ListClass>().gameObject.GetComponentsInChildren<ContentTextClass>().ToList();
+        providersList = gameObject.GetComponentInChildren<ListClass>().gameObject.GetComponentsInChildren<ContentTextClass>().ToList();
     }
 
 

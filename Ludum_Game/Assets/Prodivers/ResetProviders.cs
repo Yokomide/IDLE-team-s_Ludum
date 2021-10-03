@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class ResetProviders : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+ public void OnClick()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        ProviderMenuClass.current.CreateList();
     }
 }
