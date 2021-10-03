@@ -7,10 +7,13 @@ public class ButcherWork : MonoBehaviour
     public GameObject progress;
     public GameObject player;
     public GameObject food;
-    public ProgressBar progressBar;
+    public GameObject table;
+    public ProgressBar progressBar; 
 
     public float cookProgress;
     public float invokeDelay = 0.5f;
+
+    public bool isOnTable = false;
 
     private bool _isActive = false;
     private bool _isCooking = false;
@@ -55,6 +58,10 @@ public class ButcherWork : MonoBehaviour
 
     void Update()
     {
+        if(isOnTable == true)
+        {
+            gameObject.GetComponent<Pathfinding.AIDestinationSetter>().target = table.transform;
+        }
         if (_isActive == true)
         {
             if (cookProgress != 10)

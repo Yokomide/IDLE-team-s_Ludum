@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Butcher
   - CookTable
+  - Meat
   layers:
   - Default
   - TransparentFX
