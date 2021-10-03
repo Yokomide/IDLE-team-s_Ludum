@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class ButcherWork : MonoBehaviour
 {
+    public GameObject Relax;
     public GameObject progress;
-    public GameObject player;
+    public GameObject finished;
     public GameObject food;
+    public GameObject Food;
     public GameObject table;
     public ProgressBar progressBar; 
 
     public float cookProgress;
     public float invokeDelay = 0.5f;
+    
 
     public bool isOnTable = false;
 
@@ -72,13 +75,24 @@ public class ButcherWork : MonoBehaviour
         }
         if (cookProgress == 10)
         {
-            gameObject.GetComponent<Pathfinding.AIDestinationSetter>().target = player.transform;
+            gameObject.GetComponent<Pathfinding.AIDestinationSetter>().target = finished.transform;
+
+            if(Vector2.Distance(transform.position, finished.transform.position)<=1f)
+            {
+                Debug.Log("Да");
+                Food.transform.position = new Vector3(finished.transform.position.x, finished.transform.position.y + 0.4f, 0);
+                Food.transform.parent = finished.transform;
+                progressBar.FillSlider(0);
+                cookProgress = 0;
+                gameObject.GetComponent<Pathfinding.AIDestinationSetter>().target = Relax.transform;
+
+            }
         }
     }
 
     void SpawnFood()
     {
-        var Food = Instantiate(food, new Vector2(gameObject.transform.position.x - 0.5f, gameObject.transform.position.y - 0.3f), Quaternion.identity);
+        Food = Instantiate(food, new Vector2(gameObject.transform.position.x - 0.5f, gameObject.transform.position.y - 0.3f), Quaternion.identity);
         Food.transform.parent = gameObject.transform;
     }
 }

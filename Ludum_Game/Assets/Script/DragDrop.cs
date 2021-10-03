@@ -7,6 +7,8 @@ public class DragDrop : MonoBehaviour {
 
     public bool isDragging;
     public bool isCooking = true;
+
+    private Collider2D _cl2D;
     public void OnMouseDown()
     {
         isDragging = true;
@@ -25,8 +27,17 @@ public class DragDrop : MonoBehaviour {
             {
                 Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
                 transform.Translate(mousePosition);
+                _cl2D.enabled = false;
+            }
+            if (!isDragging)
+            {
+                _cl2D.enabled = true;
             }
         }
 
+    }
+    private void Start()
+    {
+        _cl2D = GetComponent<Collider2D>();
     }
 }

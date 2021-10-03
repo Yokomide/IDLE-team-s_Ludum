@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject player;
     public static GameManager current;
     public static float money = 1000;
     public static float reputation = 4.9f;
