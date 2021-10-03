@@ -12,7 +12,6 @@ public class CheckPlace : MonoBehaviour
             {
             Debug.Log("Вошёл");
             food.Add(other.gameObject);
-            
         }
         
     }
@@ -36,6 +35,9 @@ public class CheckPlace : MonoBehaviour
     }
     void Update()
     {
-        
+      if(butch.GetComponent<ButcherWork>().cookProgress == 10)
+        {
+            Destroy(food[0]);
+        }
     }
 }
