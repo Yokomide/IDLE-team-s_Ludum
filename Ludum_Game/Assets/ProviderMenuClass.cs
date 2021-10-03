@@ -23,22 +23,21 @@ public class ProviderMenuClass : MonoBehaviour
     {
         if (objecti.Count != 0)
         {
+            Debug.Log(objecti.Count);
             foreach (GameObject i in objecti)
             {
                 Destroy(i);
-                objecti.Remove(i);
             }
         }
+        objecti.Clear();
         providers.Clear();
-        for (int i = 1; i < UnityEngine.Random.Range(1, 4); i++)
+        for (int i = 0; i < UnityEngine.Random.Range(2, 4); i++)
         {
             var cellProv = Instantiate(cell,transform);
             objecti.Add(cellProv.gameObject);
             providers.Add(cellProv);
         }
-        
         providers = gameObject.GetComponentsInChildren<ProviderCellClass>().ToList();
-
         foreach (ProviderCellClass prov in providers)
         {
             switch (UnityEngine.Random.Range(0, 5))
@@ -62,7 +61,7 @@ public class ProviderMenuClass : MonoBehaviour
                     prov.name.text = "Shewrp";
                     break;
             }
-            prov.cost.text = Convert.ToString(UnityEngine.Random.Range(75, 200));
+            prov.cost.text = Convert.ToString(UnityEngine.Random.Range(75, 200)) +"$";
             prov.stars.text = "";
             for (int i = 0; i < UnityEngine.Random.Range(1, 5); i++)
             {

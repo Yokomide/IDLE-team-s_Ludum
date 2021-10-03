@@ -4,6 +4,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public GameObject player;
+    public static GameManager current;
     public static float money = 1000;
     public static float reputation = 4.9f;
     public static float mindStatePoints = 25;
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        current = this;
         GameEvents.current.OnSchizoRise += AddSchizo;
         GameEvents.current.OnSchizoDecrease += RemoveSchizo;
     }
@@ -19,22 +21,24 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime;
-        if (Convert.ToInt32(timer) % 3 >= 1)
+    }
+    public static void SchizoRandom()
+    {
+        switch (UnityEngine.Random.Range(0, 2))
         {
-            switch (UnityEngine.Random.Range(0, 1))
-            {
-                case 0:
-                    GameEvents.current.SchizoRise();
-                    break;
-                case 1:
-                    GameEvents.current.SchizoDecrease();
-                    break;
-            }
+            case 0:
+                AddSchizo();
+                break;
+            case 1:
+                RemoveSchizo();
+                break;
         }
+        CheckState();
     }
 
     public static void CheckState()
     {
+        Debug.LogWarning(mindStatePoints);
         if (mindStatePoints >= 90)
         {
             isCrazy = true;
