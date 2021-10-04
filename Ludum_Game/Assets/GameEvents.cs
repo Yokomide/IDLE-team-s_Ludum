@@ -10,6 +10,8 @@ public class GameEvents : MonoBehaviour
     private void Awake()
     {
         current = this;
+        gameObject.GetComponent<GameManager>().enabled = true;
+
     }
 
     public event Action OnSchizoRise;

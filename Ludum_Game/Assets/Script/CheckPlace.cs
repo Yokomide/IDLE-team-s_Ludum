@@ -13,7 +13,7 @@ public class CheckPlace : MonoBehaviour
         canPlace = false;
         if (food.Count != 3)
         {
-            if ((other.CompareTag("Meat") || other.CompareTag("Rice") || other.CompareTag("Tomato") || other.CompareTag("Potato")))
+            if ((other.CompareTag("Meat") || other.CompareTag("Rice") || other.CompareTag("Tomato") || other.CompareTag("Potato"))|| (other.CompareTag("RottenMeat")))
             {
                 if (food.Count == 0)
                 {

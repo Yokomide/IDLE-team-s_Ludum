@@ -1,5 +1,4 @@
-using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -13,6 +12,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject orderCanvas;
     public GameObject foodCanvas;
+
+    public Text moneyText;
+    public Text reputationText;
 
     private void Awake()
     {
@@ -32,6 +34,8 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime;
+        moneyText.text = "Money: " + money.ToString() + "$";
+        reputationText.text = "Reputation: " + reputation.ToString() + "★";
     }
     public static void SchizoRandom()
     {
