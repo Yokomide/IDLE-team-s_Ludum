@@ -10,6 +10,7 @@ TagManager:
   - Rice
   - Tomato
   - Potato
+  - RottenMeat
   layers:
   - Default
   - TransparentFX
