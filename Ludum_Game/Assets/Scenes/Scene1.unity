@@ -20711,10 +20711,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca99676d3cac59468666a75407416a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FoodQuality: {fileID: 0}
   status: {fileID: 918023200}
   slider: {fileID: 680735043}
   offsetSlider: {x: 0, y: 1.31, z: 0}
   offsetStatus: {x: 0, y: 1.87, z: 0}
+  offsetMessage: {x: 0, y: 0, z: 0}
   fill: {fileID: 0}
 --- !u!4 &415925027 stripped
 Transform:
@@ -22682,11 +22684,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Meat: {fileID: 6353382280973637514, guid: 2d78373d5c663c244b6c16bc0a53efa4, type: 3}
-  timeForLerp: 1
+  Potatoe: {fileID: 0}
+  Shrooms: {fileID: 0}
+  Souce: {fileID: 0}
+  tempGameObject: {fileID: 0}
   StartPos_Meat: {fileID: 1188338243}
   EndPos_Meat: {fileID: 701834143}
-  timeSpawn_Meat: 3
-  temp_timeSpawn_Meat: 0
+  timeForLerp: 1
+  temp_timeForLerp: 0
+  timeSpawn: 3
+  temp_timeSpawn: 0
+  foodGameObjectList: []
+  listtest:
+  - Meat
+  - Meat
+  - Meat
 --- !u!1 &1216595911
 GameObject:
   m_ObjectHideFlags: 0
@@ -29680,6 +29692,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1563090078}
     m_Modifications:
+    - target: {fileID: 2577585254963922476, guid: ac719b1d0f58391469cc19fd947ca44c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2577585254963922480, guid: ac719b1d0f58391469cc19fd947ca44c,
         type: 3}
       propertyPath: m_Name
@@ -31602,12 +31619,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39406f5b4185b4a4aa21b48a538d2305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Tablefood: []
+  Relax: {fileID: 0}
   progress: {fileID: 407546018}
-  player: {fileID: 401459169}
-  food: {fileID: 2577585254963922480, guid: 72b07685fbffd524eb82d56ca6150eac, type: 3}
+  finished: {fileID: 0}
+  food_rice: {fileID: 0}
+  food_bad: {fileID: 0}
+  food_poison: {fileID: 0}
+  food_potato: {fileID: 0}
+  Food: {fileID: 0}
+  table: {fileID: 0}
+  BadQuality: {fileID: 0}
   progressBar: {fileID: 407546023}
   cookProgress: 0
   invokeDelay: 1
+  isOnTable: 0
+  isDelivery: 0
 --- !u!95 &2094877257
 Animator:
   serializedVersion: 3

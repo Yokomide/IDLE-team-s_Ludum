@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4029996311547199370}
   - component: {fileID: 1308046504900294371}
   - component: {fileID: 4781255813555017312}
+  - component: {fileID: -7712545890588541436}
   m_Layer: 20
   m_Name: RottenMeat
   m_TagString: RottenMeat
@@ -146,3 +147,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-7712545890588541436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404194858980741352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b2eba88dc73e394388dc73f1f81b5c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollided: 0

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1571432951240425639}
   - component: {fileID: 2678328486632099151}
   - component: {fileID: 1650097982401932188}
+  - component: {fileID: 8237705657525183930}
   m_Layer: 20
   m_Name: Rice
   m_TagString: Rice
@@ -146,3 +147,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDragging: 0
   isCooking: 1
+--- !u!114 &8237705657525183930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7762452983771867087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b2eba88dc73e394388dc73f1f81b5c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollided: 0

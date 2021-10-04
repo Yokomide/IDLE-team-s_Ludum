@@ -6,9 +6,10 @@ public class Conveer : MonoBehaviour
 {
     [Header("Ingredients prefabs")]
     public GameObject Meat;
-    public GameObject Potatoe;
-    public GameObject Shrooms;
-    public GameObject Souce;
+    public GameObject Potato;
+    public GameObject Rice;
+    public GameObject Tomato;
+    public GameObject RottenMeat;
 
     [HideInInspector]public GameObject tempGameObject;
 
@@ -49,15 +50,13 @@ public class Conveer : MonoBehaviour
         
         if (tempGameObject != null)
         {
-
-            Debug.Log(tempGameObject);
-            Debug.Log(tempGameObject.GetComponent<FoodScript>().isCollided);
             if(tempGameObject.GetComponent<FoodScript>().isCollided == true)
             {
-                // tempGameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+                tempGameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
                 tempGameObject = null;
             }
-            tempGameObject.transform.position = Vector2.Lerp(EndPos_Meat.transform.position, StartPos_Meat.transform.position, temp_timeForLerp);
+            try{tempGameObject.transform.position = Vector2.Lerp(EndPos_Meat.transform.position, StartPos_Meat.transform.position, temp_timeForLerp);}
+            catch{}
             if(temp_timeForLerp<=0)
             {
                tempGameObject = null;
@@ -91,14 +90,17 @@ public class Conveer : MonoBehaviour
                 case "Meat":
                    foodGameObjectList.Add(Meat);
                    break;
-                case "Potatoe":
-                   foodGameObjectList.Add(Potatoe);
+                case "Potato":
+                   foodGameObjectList.Add(Potato);
                    break;
-                case "Shrooms":
-                   foodGameObjectList.Add(Shrooms);
+                case "Rice":
+                   foodGameObjectList.Add(Rice);
                    break;
-                case "Souce":
-                   foodGameObjectList.Add(Souce);
+                case "Tomato":
+                   foodGameObjectList.Add(Tomato);
+                   break;
+                case "RottenMeat":
+                   foodGameObjectList.Add(RottenMeat);
                    break;
             }
         }
