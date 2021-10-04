@@ -52,7 +52,7 @@ public class FoodMenuClass : MonoBehaviour
                     c.name.text = "Jane";
                     break;
             }
-            foreach (FoodReceiptClass food in c.GetComponents<FoodReceiptClass>())
+            foreach (FoodReceiptClass food in c.GetComponentsInChildren<FoodReceiptClass>())
             {
                 food.GetComponentInChildren<FoodCellSpriteClass>().GetComponent<Image>().sprite = (foodList.list[Random.Range(0, foodList.list.Count - 1)]).sprite;
             }

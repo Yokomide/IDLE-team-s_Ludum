@@ -71,20 +71,37 @@ public class ProviderMenuClass : MonoBehaviour
             for (int i = 0; i < UnityEngine.Random.Range(3, 8); i++)
             {
                 var text = Instantiate(textPrefab, prov.GetComponentInChildren<ListClass>().gameObject.transform);
-                switch (UnityEngine.Random.Range(0, 4))
+                switch (UnityEngine.Random.Range(0, 9))
                 {
                     case 0:
                         text.GetComponent<Text>().text = "Meat";
                         break;
                     case 1:
-                        text.GetComponent<Text>().text = "Potatoe";
+                        text.GetComponent<Text>().text = "Potato";
                         break;
                     case 2:
                         text.GetComponent<Text>().text = "Shrooms";
                         break;
                     case 3:
-                        text.GetComponent<Text>().text = "Souce";
+                        text.GetComponent<Text>().text = "Sauce";
                         break;
+                    case 4:
+                        text.GetComponent<Text>().text = "RottenShroom";
+                        break;
+                    case 5:
+                        text.GetComponent<Text>().text = "RottenPotato";
+                        break;
+                    case 6:
+                        text.GetComponent<Text>().text = "Rice";
+                        break;
+                    case 7:
+                        text.GetComponent<Text>().text = "Tomato";
+                        break;
+                    case 8:
+                        text.GetComponent<Text>().text = "RottenMeat";
+                        break;
+
+
                 }
             }
 

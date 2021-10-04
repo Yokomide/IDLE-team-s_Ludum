@@ -7,6 +7,15 @@ TagManager:
   - Butcher
   - CookTable
   - "\u0421hair"
+  - RottenMeat
+  - Meat
+  - Rice
+  - Potato
+  - Tomato
+  - RiceMeal
+  - RottenMeal
+  - PotatoMeal
+  - BadMeal
   layers:
   - Default
   - TransparentFX
