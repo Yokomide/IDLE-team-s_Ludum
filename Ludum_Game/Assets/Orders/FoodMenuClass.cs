@@ -30,13 +30,15 @@ public class FoodMenuClass : MonoBehaviour
             var c = Instantiate(cell, transform);
             receipts.Add(c);
             cells.Add(c.gameObject);
-            chance -= 20;
+            chance -= 10;
             c.name.text = "Name";
             for (int i = 0; i < Random.Range(2, 5); i++)
             {
                 c.Retranslate();
 
             }
+            FoodReceiptClass[] shit = c.GetComponents<FoodReceiptClass>();
+            Debug.Log(shit.Length);
             switch (Random.Range(0, 4))
             {
                 case 0:
@@ -52,7 +54,7 @@ public class FoodMenuClass : MonoBehaviour
                     c.name.text = "Jane";
                     break;
             }
-            foreach (FoodReceiptClass food in c.GetComponents<FoodReceiptClass>())
+            foreach (FoodCellSpriteClass food in c.GetComponents<FoodCellSpriteClass>())
             {
                 food.GetComponentInChildren<FoodCellSpriteClass>().GetComponent<Image>().sprite = (foodList.list[Random.Range(0, foodList.list.Count - 1)]).sprite;
             }
@@ -81,6 +83,7 @@ public class FoodMenuClass : MonoBehaviour
             foreach (FoodReceiptClass food in rec.GetComponents<FoodReceiptClass>())
             {
                 food.GetComponentInChildren<FoodCellSpriteClass>().GetComponent<Image>().sprite = (foodList.list[Random.Range(0, foodList.list.Count - 1)]).sprite;
+                Debug.Log("υσι");
             }
         }
     }

@@ -10,6 +10,8 @@ public class FoodCellClass : MonoBehaviour
     public List<FoodCellSpriteClass> sprites = new List<FoodCellSpriteClass>();
     public Text timer;
     public int readyTime;
+
+    public ListObject foodCollection;
     
     public GameObject FoodBlockCell;
 
@@ -53,6 +55,5 @@ public class FoodCellClass : MonoBehaviour
     public void Retranslate()
     {
         Instantiate(FoodBlockCell,gameObject.GetComponentInChildren<ReceiptFoodClass>().transform);
-        
     }
 }

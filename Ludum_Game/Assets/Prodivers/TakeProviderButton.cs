@@ -11,7 +11,7 @@ public class TakeProviderButton : MonoBehaviour
     public void OnClick()
     {
         var texting = gameObject.GetComponentInParent<ProviderCellClass>().cost.text;
-        if (GameManager.money - Convert.ToInt32(texting) >= 0)
+        if (GameManager.money - Convert.ToInt32(texting.Remove(texting.Length - 1)) >= 0)
         {
             GameManager.money -= Convert.ToInt32(texting.Remove(texting.Length - 1));
             GameManager.SchizoRandom();

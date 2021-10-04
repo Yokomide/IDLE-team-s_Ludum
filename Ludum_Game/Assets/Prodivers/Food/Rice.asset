@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodName: Rice
   isRotten: 0
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300152, guid: 29c9cded5e558164aaf8c9bf08aa1510, type: 3}

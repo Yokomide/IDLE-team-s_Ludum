@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodName: Meat
   isRotten: 0
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: b7749ce8cc1c68a4a8d01edef6582904, type: 3}
