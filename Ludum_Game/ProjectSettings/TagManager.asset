@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Butcher
   - CookTable
+  - Meat
+  - Rice
+  - Tomato
+  - Potato
   layers:
   - Default
   - TransparentFX

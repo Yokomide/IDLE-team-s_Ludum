@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 2577585254963922481}
   - component: {fileID: 2577585254963922478}
   m_Layer: 20
-  m_Name: PF Props Pot B 1
+  m_Name: PF Props Pot B 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -155,7 +155,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 13
   m_Sprite: {fileID: 21300092, guid: 29c9cded5e558164aaf8c9bf08aa1510, type: 3}
-  m_Color: {r: 0.990566, g: 0.34446457, b: 0.1728818, a: 1}
+  m_Color: {r: 0.17254904, g: 0.45793968, b: 0.99215686, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
