@@ -27,7 +27,6 @@ public class FoodMenuClass : MonoBehaviour
     {
         if (System.Convert.ToInt32(GameManager.timer) % 15 > 0 && Random.Range(0, 1000) > 995 && chance >= 60)
         {
-            Debug.LogError(System.Convert.ToInt32(GameManager.timer));
             var c = Instantiate(cell, transform);
             receipts.Add(c);
             cells.Add(c.gameObject);

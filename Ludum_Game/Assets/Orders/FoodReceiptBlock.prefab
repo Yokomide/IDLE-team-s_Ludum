@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1392826938993701370}
   - component: {fileID: 1694129604363001514}
   - component: {fileID: 5943602031462270258}
+  - component: {fileID: 2472118874237031516}
   m_Layer: 5
   m_Name: FoodReceiptBlock
   m_TagString: Untagged
@@ -114,6 +115,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b03d86f39b4a843b79949d606ae1a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2472118874237031516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855649675120576208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: 1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &5659082627856627639
 GameObject:
   m_ObjectHideFlags: 0

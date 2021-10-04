@@ -54,7 +54,6 @@ public class ButcherWork : MonoBehaviour
             SpawnFood();
         }
         _isActive = true;
-        Debug.Log(cookProgress);
     }
 
     void CookingDelay()
