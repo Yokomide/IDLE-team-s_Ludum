@@ -9,6 +9,7 @@ TagManager:
   - Meat
   - Rice
   - Tomato
+  - Potato
   layers:
   - Default
   - TransparentFX
