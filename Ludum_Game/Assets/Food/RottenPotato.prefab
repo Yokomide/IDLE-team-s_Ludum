@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7114868374401983508}
   - component: {fileID: -5084619465014843911}
   m_Layer: 20
-  m_Name: Potato
+  m_Name: RottenPotato
   m_TagString: Potato
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: -105541197
   m_SortingLayer: 3
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: da73e8783b77f43478d496a68e5719a3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b54039b8b3c93754ebad5ff4a5c407a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
