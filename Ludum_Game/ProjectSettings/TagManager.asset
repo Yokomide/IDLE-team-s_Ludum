@@ -6,11 +6,7 @@ TagManager:
   tags:
   - Butcher
   - CookTable
-  - Meat
-  - Rice
-  - Tomato
-  - Potato
-  - RottenMeat
+  - "\u0421hair"
   layers:
   - Default
   - TransparentFX
