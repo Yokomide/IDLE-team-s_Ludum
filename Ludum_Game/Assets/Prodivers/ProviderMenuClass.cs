@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ProviderMenuClass : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class ProviderMenuClass : MonoBehaviour
     public List<ProviderCellClass> providers = new List<ProviderCellClass>();
     public List<GameObject> objecti = new List<GameObject>();
     public ProviderCellClass cell;
+    public GameObject textPrefab;
 
     private void Awake()
     {
@@ -32,7 +34,7 @@ public class ProviderMenuClass : MonoBehaviour
         providers.Clear();
         for (int i = 0; i < UnityEngine.Random.Range(2, 4); i++)
         {
-            var cellProv = Instantiate(cell,transform);
+            var cellProv = Instantiate(cell, transform);
             objecti.Add(cellProv.gameObject);
             providers.Add(cellProv);
         }
@@ -60,12 +62,32 @@ public class ProviderMenuClass : MonoBehaviour
                     prov.name.text = "Shewrp";
                     break;
             }
-            prov.cost.text = Convert.ToString(UnityEngine.Random.Range(75, 200)) +"$";
+            prov.cost.text = Convert.ToString(UnityEngine.Random.Range(75, 200)) + "$";
             prov.stars.text = "";
             for (int i = 0; i < UnityEngine.Random.Range(1, 5); i++)
             {
                 prov.stars.text += "★";
             }
+            for (int i = 0; i < UnityEngine.Random.Range(3, 8); i++)
+            {
+                var text = Instantiate(textPrefab, prov.GetComponentInChildren<ListClass>().gameObject.transform);
+                switch (UnityEngine.Random.Range(0, 4))
+                {
+                    case 0:
+                        text.GetComponent<Text>().text = "Meat";
+                        break;
+                    case 1:
+                        text.GetComponent<Text>().text = "Potatoe";
+                        break;
+                    case 2:
+                        text.GetComponent<Text>().text = "Shrooms";
+                        break;
+                    case 3:
+                        text.GetComponent<Text>().text = "Souce";
+                        break;
+                }
+            }
+
         }
     }
 }

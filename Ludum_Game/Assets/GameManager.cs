@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,11 +11,22 @@ public class GameManager : MonoBehaviour
     public static bool isCrazy = false;
     public static float timer = 0;
 
+    public GameObject orderCanvas;
+    public GameObject foodCanvas;
+
     private void Awake()
     {
         current = this;
         GameEvents.current.OnSchizoRise += AddSchizo;
         GameEvents.current.OnSchizoDecrease += RemoveSchizo;
+    }
+
+    private void Start()
+    {
+        orderCanvas.GetComponent<GraphicRaycaster>().enabled = false;
+        orderCanvas.GetComponent<Canvas>().targetDisplay = 1;
+        foodCanvas.GetComponent<GraphicRaycaster>().enabled = false;
+        foodCanvas.GetComponent<Canvas>().targetDisplay = 1;
     }
 
     private void Update()
